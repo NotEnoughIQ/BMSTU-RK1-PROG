@@ -23,7 +23,7 @@ int main()
 
 		cout << "Name of the book: ";
 		cin.getline(buffer,100);
-        
+
 		names[i] = new char[strlen(buffer)];
 		strcpy(names[i], buffer);
 
@@ -60,4 +60,10 @@ int main()
 	for (int i = 0; i<size; ++i){
 		cout << " Name of the book - " << names[i]<<endl << " Autor's name: - " << author[i]<<endl << " Year of publicity:  - " << Year[i]<<endl << " Amount copies of the books: - " << copies[i]<<endl<<endl; 
 	}return 0;
+
+    delete(names);
+    delete(author);
+    delete(Year);
+    delete(copies);
+
 }
